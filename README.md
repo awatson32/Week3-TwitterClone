@@ -2,7 +2,8 @@
 
 The objective of this project is to create a mock twitter.
 
-It is advised to globally install nodemon and mocha since a server will be used in this project. Nodemon will allow for the server to run and continuously update when changes occur in your files. Mocha will be used for some server side testing which will be run on your console.
+It is advised to globally install nodemon and mocha since a server will be used in this project. Nodemon will allow for the server to run and continuously 
+update when changes occur in your files. Mocha will be used for some server side testing which will be run on your console.
 
 ~~~~~~
 $ npm install -g nodemon mocha bower
