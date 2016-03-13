@@ -8,6 +8,20 @@ $(document).ready(function(){
 
 	function getData() {
 		/*This function should make a get request from 'database', parse the data and prepend each to the page*/
+        $.getJSON('messages.txt', function(data){
+            console.log(data);
+            
+            var messages = data.messages.map(function (message) {
+                return message.userName + ': ' + message.text;
+            });
+            
+            posts.empty();
+            
+            if (messages.length) {
+                var content = '<li>' + messages.join('</li><li>') + '</li>';
+                posts.append(content);
+            }            
+        });
 	}
 
 	/*Calls function once page loaded to display tweets to page*/

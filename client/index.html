@@ -4,10 +4,34 @@
 		<title>MyTweets</title>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap-theme.min.css">
 	</head>
 	<body>
 		<!--format html below-->
-		<h1>Hello World</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="update-container">
+                        <ul class="posts">
+                        </ul>
+                    </div>
+                </div>
+                    
+                <div class="col-md-6">
+                    <div class="post-container">
+                        <form>
+                            <textarea class="form-control" rows="2" placeholder="What's happening?"></textarea>
+                        </form>
+                        <div class="button-group pull-right">
+                            <p class="counter">140</p>
+                            <a href="#" class="btn btn-primary">Tweet</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        
+        
 
 		<script src="components/jquery/dist/jquery.min.js"></script>
 		<script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
