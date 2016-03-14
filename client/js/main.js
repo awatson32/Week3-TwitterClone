@@ -9,13 +9,21 @@ $(document).ready(function(){
 	function getData() {
            
 		/*This function should make a get request from 'database', parse the data and prepend each to the page*/
-        $.getJSON('/messages', function(data) {
-            var messages = [];
-            $.each(data, function (text, userName) {
-                messages.push('<li>' + userName + ': ' + text);
-            }).prepend('#posts');
-                     
+        $.get('/messages', function(data) {
+            var tweet = data;
+            var text = tweet.split(' ');
+            for (var i in text) {
+                $('.posts').prepend('<li>' + text[i] + '<li>');
+                $('.posts').prepend('</br>');
+            }
         })
+        // $.getJSON('/messages', function(data) {
+        //     var messages = [];
+        //     $.each(data, function (text, userName) {
+        //         messages.push('<li>' + userName + ': ' + text);
+        //     }).prepend('#posts');
+                     
+        // })
 	}
     console.log("this text works")
 	/*Calls function once page loaded to display tweets to page*/
