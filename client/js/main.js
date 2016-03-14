@@ -1,10 +1,9 @@
 $(document).ready(function(){
 /*Using document ready runs code only after the DOM is ready for js code to run more on that here: https://learn.jquery.com/using-jquery-core/document-ready */
 	function postData() {
-        $('.btn').on('click', function() {
+        $('#send').on('click', function() {
             var post = $('.status-box').val();
-            $('.posts').prepend('<li>' + post + '</li>')
-            // $('<li>').text(post).prependTo('.posts');
+            $('.posts').prepend('<li>' + post + '</li>');
         });
         
 		/*This function should create a post request using jquery. When posted it should:
@@ -23,14 +22,7 @@ $(document).ready(function(){
                 $('.posts').append('<li>' + text[i] + '</li>');
                 $('.posts').append('</br>');
             }
-        })
-        // $.getJSON('/messages', function(data) {
-        //     var messages = [];
-        //     $.each(data, function (text, userName) {
-        //         messages.push('<li>' + userName + ': ' + text);
-        //     }).prepend('#posts');
-                     
-        // })
+        });
 	}
 
 	/*Calls function once page loaded to display tweets to page*/
