@@ -2,19 +2,19 @@ $(document).ready(function(){
 /*Using document ready runs code only after the DOM is ready for js code to run more on that here: https://learn.jquery.com/using-jquery-core/document-ready */
 	function postData() {
         
-    //     $.ajax({
-    //        type: 'POST',
-    //        url: '/messages',
-    //        beforeSend: function() {
-    //            $('#posts-container').append('<div id="load">Loading</div>');
-    //        },
-    //        complete: function() {
-    //            $('#load').remove();
-    //        },
-    //        success: function(data) {
+        $.ajax({
+           type: 'POST',
+           url: '/messages',
+           beforeSend: function() {
+               $('#posts-container').prepend('<div id="load">Loading</div>');
+           },
+           complete: function() {
+               $('#load').remove();
+           },
+           success: function(data) {
                
-    //        }
-    //    })
+           }
+       })
        
     //     $('#send').on('click', function() {
     //         var post = $('.status-box').val();
